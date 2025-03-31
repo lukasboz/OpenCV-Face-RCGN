@@ -1,0 +1,90 @@
+\doxysection{Face\+Detector Class Reference}
+\hypertarget{classFaceDetector}{}\label{classFaceDetector}\index{FaceDetector@{FaceDetector}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFaceDetector_afe36434a91c9b54153292acf1cd5e9cd}{Face\+Detector}} (const std\+::string \&cascade\+Path="{}"{})
+\begin{DoxyCompactList}\small\item\em Constructor that optionally loads a cascade path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFaceDetector_a3ae3d7c8e8c4f05ee42396f0a362fc6e}{load\+Cascade}} (const std\+::string \&cascade\+Path)
+\begin{DoxyCompactList}\small\item\em Method used by the constructor to Load or reload the cascade XML file at runtime. \end{DoxyCompactList}\item 
+std\+::vector$<$ cv\+::\+Rect $>$ \mbox{\hyperlink{classFaceDetector_a67958f1b3d12f62d72ea12d3a7d5163e}{detect\+Faces}} (const cv\+::\+Mat \&gray\+Frame)
+\begin{DoxyCompactList}\small\item\em Detect faces in a given grayscale image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classFaceDetector_afd9c899082b0afadf18107250a0e1216}\label{classFaceDetector_afd9c899082b0afadf18107250a0e1216} 
+cv\+::\+Cascade\+Classifier {\bfseries face\+Cascade}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFaceDetector_afe36434a91c9b54153292acf1cd5e9cd}\label{classFaceDetector_afe36434a91c9b54153292acf1cd5e9cd} 
+\index{FaceDetector@{FaceDetector}!FaceDetector@{FaceDetector}}
+\index{FaceDetector@{FaceDetector}!FaceDetector@{FaceDetector}}
+\doxysubsubsection{\texorpdfstring{FaceDetector()}{FaceDetector()}}
+{\footnotesize\ttfamily Face\+Detector\+::\+Face\+Detector (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cascade\+Path = {\ttfamily "{}"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor that optionally loads a cascade path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cascade\+Path} & Path to the Haar Cascade XML file. If empty, the cascade will be loaded later.\\
+\hline
+\end{DoxyParams}
+The constructor initializes the \doxylink{classFaceDetector}{Face\+Detector} object and optionally loads the cascade classifier if a path is provided. If the path is empty, the object will be created but no cascade will be loaded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cascade\+Path} & Path to the Haar Cascade XML file. If empty, the cascade will be loaded later.\\
+\hline
+\end{DoxyParams}
+The constructor initializes the \doxylink{classFaceDetector}{Face\+Detector} object and optionally loads the cascade classifier if a path is provided. If the path is empty, the object will be created but no cascade will be loaded. \begin{DoxyAuthor}{Author}
+Naween Sawari 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFaceDetector_a67958f1b3d12f62d72ea12d3a7d5163e}\label{classFaceDetector_a67958f1b3d12f62d72ea12d3a7d5163e} 
+\index{FaceDetector@{FaceDetector}!detectFaces@{detectFaces}}
+\index{detectFaces@{detectFaces}!FaceDetector@{FaceDetector}}
+\doxysubsubsection{\texorpdfstring{detectFaces()}{detectFaces()}}
+{\footnotesize\ttfamily std\+::vector$<$ cv\+::\+Rect $>$ Face\+Detector\+::detect\+Faces (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{gray\+Frame }\end{DoxyParamCaption})}
+
+
+
+Detect faces in a given grayscale image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gray\+Frame} & Grayscale image in which to detect faces. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of rectangles representing the detected faces.
+\end{DoxyReturn}
+This method takes a grayscale image as input and uses the loaded Haar Cascade classifier to detect faces. It returns a vector of rectangles, each representing the bounding box of a detected face. \Hypertarget{classFaceDetector_a3ae3d7c8e8c4f05ee42396f0a362fc6e}\label{classFaceDetector_a3ae3d7c8e8c4f05ee42396f0a362fc6e} 
+\index{FaceDetector@{FaceDetector}!loadCascade@{loadCascade}}
+\index{loadCascade@{loadCascade}!FaceDetector@{FaceDetector}}
+\doxysubsubsection{\texorpdfstring{loadCascade()}{loadCascade()}}
+{\footnotesize\ttfamily bool Face\+Detector\+::load\+Cascade (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cascade\+Path }\end{DoxyParamCaption})}
+
+
+
+Method used by the constructor to Load or reload the cascade XML file at runtime. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cascade\+Path} & Path to the Haar Cascade XML file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the cascade was loaded successfully, false otherwise.
+\end{DoxyReturn}
+This method is used by the constructor, and loads the cascade classifier from the speicified file path. If the file is not found or an error occurs during loading, the method returns false. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{FaceDetector_8h}{Face\+Detector.\+h}}\item 
+src/\mbox{\hyperlink{FaceDetector_8cpp}{Face\+Detector.\+cpp}}\end{DoxyCompactItemize}

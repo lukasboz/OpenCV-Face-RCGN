@@ -1,0 +1,12 @@
+digraph "src/mainwindow.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="src/mainwindow.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Header file for the mainwindow class, which is the window that identifies the user based on the train..."];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="src/main.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="Main method of the program."];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="src/mainwindow.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$mainwindow_8cpp.html",tooltip="This class implements the mainwindow class to create the GUI."];
+}

@@ -1,0 +1,30 @@
+\doxysection{src/\+Edit\+Profile.cpp File Reference}
+\hypertarget{EditProfile_8cpp}{}\label{EditProfile_8cpp}\index{src/EditProfile.cpp@{src/EditProfile.cpp}}
+
+
+This class provides functionality to edit a user\textquotesingle{}s job status and access levels.  
+
+
+{\ttfamily \#include "{}Edit\+Profile.\+h"{}}\newline
+{\ttfamily \#include $<$QFile$>$}\newline
+{\ttfamily \#include $<$QText\+Stream$>$}\newline
+{\ttfamily \#include $<$QLabel$>$}\newline
+{\ttfamily \#include $<$QFrame$>$}\newline
+{\ttfamily \#include $<$QDebug$>$}\newline
+{\ttfamily \#include $<$QPush\+Button$>$}\newline
+{\ttfamily \#include $<$QScroll\+Area$>$}\newline
+{\ttfamily \#include $<$QDir$>$}\newline
+{\ttfamily \#include $<$QPixmap$>$}\newline
+{\ttfamily \#include $<$QSplitter$>$}\newline
+{\ttfamily \#include $<$QMessage\+Box$>$}\newline
+{\ttfamily \#include $<$QCombo\+Box$>$}\newline
+{\ttfamily \#include $<$QClose\+Event$>$}\newline
+{\ttfamily \#include $<$QCore\+Application$>$}\newline
+{\ttfamily \#include $<$QDate\+Time$>$}\newline
+Include dependency graph for Edit\+Profile.\+cpp\+:
+% FIG 0
+
+
+\doxysubsection{Detailed Description}
+This class provides functionality to edit a user\textquotesingle{}s job status and access levels. 
+

@@ -1,0 +1,253 @@
+\doxysection{Edit\+Profile Class Reference}
+\hypertarget{classEditProfile}{}\label{classEditProfile}\index{EditProfile@{EditProfile}}
+
+
+Inheritance diagram for Edit\+Profile\+:
+% FIG 0
+
+
+Collaboration diagram for Edit\+Profile\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEditProfile_a5034aa701be4555005c2bc0a2105628d}{Edit\+Profile}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em The constructor sets up the GUI\textquotesingle{}s layout. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEditProfile_aff42f053f738d303d7262c926a6f687b}{count\+Lines\+In\+File}} ()
+\begin{DoxyCompactList}\small\item\em Counts the number of non-\/empty lines in the CSV file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEditProfile_a9beb3dc66a826c144b696241c4dd8de4}{show\+Access\+Level\+Popup}} ()
+\begin{DoxyCompactList}\small\item\em Displays a popup showing the the current access level of the user and allows the user to edit it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEditProfile_a191302b76c7020ef0d2be15b940540b5}{edit\+Access\+Level}} ()
+\begin{DoxyCompactList}\small\item\em opens a dialog to edit the access level of the user of interest \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEditProfile_aa6513ea4c8bd1578891e2d22cdd687b9}{close\+Event}} (QClose\+Event \texorpdfstring{$\ast$}{*}event)
+\begin{DoxyCompactList}\small\item\em Handles the close event of the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classEditProfile_a9d36e97e22408ac02e2c8674839619b2}{edit\+CSVFile}} (const QString \&, const QString \&job, const QString \&access)
+\begin{DoxyCompactList}\small\item\em Edits the CSV file with the new job status and access level for a given name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classEditProfile_a8de8317fe8cac479f8540047f2a1eea0}\label{classEditProfile_a8de8317fe8cac479f8540047f2a1eea0} 
+void {\bfseries on\+Back\+Button\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Sets a flag to indicate that the back button was clicked and sends a signal to close the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEditProfile_acfa856f815f9f8b2ada36478e3a05b2e}{refresh\+CSV}} ()
+\begin{DoxyCompactList}\small\item\em Refreshes the CSV file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classEditProfile_a22c8dc078c0ee46ae5e28987923637df}\label{classEditProfile_a22c8dc078c0ee46ae5e28987923637df} 
+QFrame \texorpdfstring{$\ast$}{*} {\bfseries create\+Window\+Frame} ()
+\item 
+QFrame \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEditProfile_a7ebef621052b4e883d18a724f29f2c23}{Create\+Top\+Section}} ()
+\begin{DoxyCompactList}\small\item\em creates the top scetion of the sidebar \end{DoxyCompactList}\item 
+QFrame \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEditProfile_aa5ea4c9eb11b6769c520cb652e534e2a}{create\+Middle\+Section}} ()
+\begin{DoxyCompactList}\small\item\em creates the middle section of the GUI \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classEditProfile_a9e06474c3727425c24593207f384cef9}{get\+Name}} (int)
+\begin{DoxyCompactList}\small\item\em Gets the name of the user from the CSV file based on the line number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEditProfile_ad7c745541846fa56160fa2d5f9c7699d}{load\+First\+Line}} (QString name)
+\begin{DoxyCompactList}\small\item\em Loads the first line of the CSV file and updates the profile information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classEditProfile_a03420cf867a6c448042b6ce595dc55fe}\label{classEditProfile_a03420cf867a6c448042b6ce595dc55fe} 
+QScroll\+Area \texorpdfstring{$\ast$}{*} {\bfseries scroll\+Area}
+\item 
+\Hypertarget{classEditProfile_a7227acac12a3ccef7fd8e5857924b508}\label{classEditProfile_a7227acac12a3ccef7fd8e5857924b508} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries first\+Line\+Label}
+\item 
+\Hypertarget{classEditProfile_a29a25585171f49250998fb287db10eae}\label{classEditProfile_a29a25585171f49250998fb287db10eae} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries image\+Label}
+\item 
+\Hypertarget{classEditProfile_af737a5b75b74ca4e6b64cda854eefa68}\label{classEditProfile_af737a5b75b74ca4e6b64cda854eefa68} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries name\+Label}
+\item 
+\Hypertarget{classEditProfile_abbc97f7dc78282d60b768c19018e75bc}\label{classEditProfile_abbc97f7dc78282d60b768c19018e75bc} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries date\+Label}
+\item 
+\Hypertarget{classEditProfile_a5d22580848fd2b6b7d1ace873f34a28d}\label{classEditProfile_a5d22580848fd2b6b7d1ace873f34a28d} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries job\+Label}
+\item 
+\Hypertarget{classEditProfile_ae98c63df4aaa1e9b0dc826ec3f017a5f}\label{classEditProfile_ae98c63df4aaa1e9b0dc826ec3f017a5f} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries access\+Label}
+\item 
+\Hypertarget{classEditProfile_ad16ab111fd55b03db68437b412002aa0}\label{classEditProfile_ad16ab111fd55b03db68437b412002aa0} 
+bool {\bfseries m\+\_\+from\+Back\+Button} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEditProfile_a5034aa701be4555005c2bc0a2105628d}\label{classEditProfile_a5034aa701be4555005c2bc0a2105628d} 
+\index{EditProfile@{EditProfile}!EditProfile@{EditProfile}}
+\index{EditProfile@{EditProfile}!EditProfile@{EditProfile}}
+\doxysubsubsection{\texorpdfstring{EditProfile()}{EditProfile()}}
+{\footnotesize\ttfamily Edit\+Profile\+::\+Edit\+Profile (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+The constructor sets up the GUI\textquotesingle{}s layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget for the GUI\\
+\hline
+\end{DoxyParams}
+This constructor initializes the GUI layout, including the sidebar, middle section, and right section. It also displays the profile details (name, date joined, highest access level, and job status) in the GUI. The GUI includes buttons on the sidebar for navigating back and refreshing the dataset. The middle section displays the profile details, and the right section contains a scroll area for profile buttons.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget for the GUI\\
+\hline
+\end{DoxyParams}
+This constructor initializes the GUI layout, including the sidebar, middle section, and right section. It also displays the profile details (name, date joined, highest access level, and job status) in the GUI. The GUI includes buttons on the sidebar for navigating back and refreshing the dataset. The middle section displays the profile details, and the right section contains a scroll area for profile buttons.
+
+\begin{DoxyAuthor}{Author}
+Kevin Russel 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEditProfile_aa6513ea4c8bd1578891e2d22cdd687b9}\label{classEditProfile_aa6513ea4c8bd1578891e2d22cdd687b9} 
+\index{EditProfile@{EditProfile}!closeEvent@{closeEvent}}
+\index{closeEvent@{closeEvent}!EditProfile@{EditProfile}}
+\doxysubsubsection{\texorpdfstring{closeEvent()}{closeEvent()}}
+{\footnotesize\ttfamily void Edit\+Profile\+::close\+Event (\begin{DoxyParamCaption}\item[{QClose\+Event \texorpdfstring{$\ast$}{*}}]{event }\end{DoxyParamCaption})}
+
+
+
+Handles the close event of the widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The close event\\
+\hline
+\end{DoxyParams}
+This function handles the close event of the widget. If the close event is triggered by the back button, it allows the event to be accepted. Otherwise, it quits the application. \Hypertarget{classEditProfile_aff42f053f738d303d7262c926a6f687b}\label{classEditProfile_aff42f053f738d303d7262c926a6f687b} 
+\index{EditProfile@{EditProfile}!countLinesInFile@{countLinesInFile}}
+\index{countLinesInFile@{countLinesInFile}!EditProfile@{EditProfile}}
+\doxysubsubsection{\texorpdfstring{countLinesInFile()}{countLinesInFile()}}
+{\footnotesize\ttfamily int Edit\+Profile\+::count\+Lines\+In\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Counts the number of non-\/empty lines in the CSV file. 
+
+\begin{DoxyReturn}{Returns}
+The number of non-\/empty lines in the CSV file. If the CSV cannot be opened, it returns -\/1.
+\end{DoxyReturn}
+This function first opens the "{}names.\+csv"{} file. If the file cannot open properly, it outputs an error message and returns -\/1. Otherwise, it reads through the file line by line, counting the number of non-\/empty lines. The function then returns the count of non-\/empty lines. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{classEditProfile_aa5ea4c9eb11b6769c520cb652e534e2a}\label{classEditProfile_aa5ea4c9eb11b6769c520cb652e534e2a} 
+\index{EditProfile@{EditProfile}!createMiddleSection@{createMiddleSection}}
+\index{createMiddleSection@{createMiddleSection}!EditProfile@{EditProfile}}
+\doxysubsubsection{\texorpdfstring{createMiddleSection()}{createMiddleSection()}}
+{\footnotesize\ttfamily QFrame \texorpdfstring{$\ast$}{*} Edit\+Profile\+::create\+Middle\+Section (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+creates the middle section of the GUI 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the middle section of the GUI
+\end{DoxyReturn}
+This function creates the middle section of the GUI, which contains the profile picture and details. The profile picture is displayed on the left, and the profile details (name, date joined, job status, access level) are displayed on the right. \Hypertarget{classEditProfile_a7ebef621052b4e883d18a724f29f2c23}\label{classEditProfile_a7ebef621052b4e883d18a724f29f2c23} 
+\index{EditProfile@{EditProfile}!CreateTopSection@{CreateTopSection}}
+\index{CreateTopSection@{CreateTopSection}!EditProfile@{EditProfile}}
+\doxysubsubsection{\texorpdfstring{CreateTopSection()}{CreateTopSection()}}
+{\footnotesize\ttfamily QFrame \texorpdfstring{$\ast$}{*} Edit\+Profile\+::\+Create\+Top\+Section (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+creates the top scetion of the sidebar 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the top section of the sidebar
+\end{DoxyReturn}
+This function creates a scrollable area containing buttons for each name in the CSV file. Each button, when clicked, loads the corresponding profile information. The top section is styled with a dark background and contains a label prompting the user to select a name. \Hypertarget{classEditProfile_a191302b76c7020ef0d2be15b940540b5}\label{classEditProfile_a191302b76c7020ef0d2be15b940540b5} 
+\index{EditProfile@{EditProfile}!editAccessLevel@{editAccessLevel}}
+\index{editAccessLevel@{editAccessLevel}!EditProfile@{EditProfile}}
+\doxysubsubsection{\texorpdfstring{editAccessLevel()}{editAccessLevel()}}
+{\footnotesize\ttfamily void Edit\+Profile\+::edit\+Access\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+opens a dialog to edit the access level of the user of interest 
+
+Allows the user to select a new job status and access level from a list of dropdown options. After an option is selected, the function updates the CSV file with the new values. \Hypertarget{classEditProfile_a9d36e97e22408ac02e2c8674839619b2}\label{classEditProfile_a9d36e97e22408ac02e2c8674839619b2} 
+\index{EditProfile@{EditProfile}!editCSVFile@{editCSVFile}}
+\index{editCSVFile@{editCSVFile}!EditProfile@{EditProfile}}
+\doxysubsubsection{\texorpdfstring{editCSVFile()}{editCSVFile()}}
+{\footnotesize\ttfamily void Edit\+Profile\+::edit\+CSVFile (\begin{DoxyParamCaption}\item[{const QString \&}]{name,  }\item[{const QString \&}]{job,  }\item[{const QString \&}]{access }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Edits the CSV file with the new job status and access level for a given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & The new job status to be set for the user \\
+\hline
+{\em access} & The new access level to be set for the user\\
+\hline
+\end{DoxyParams}
+This function takes the new job status and access level as parameters and updates the CSV file accordingly. It searches for the user\textquotesingle{}s name in the CSV file and modifies the corresponding line with the new values. If the user is not found, it outputs an error message. The function also handles file opening and closing, ensuring that the changes are saved correctly. \Hypertarget{classEditProfile_a9e06474c3727425c24593207f384cef9}\label{classEditProfile_a9e06474c3727425c24593207f384cef9} 
+\index{EditProfile@{EditProfile}!getName@{getName}}
+\index{getName@{getName}!EditProfile@{EditProfile}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily QString Edit\+Profile\+::get\+Name (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the name of the user from the CSV file based on the line number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & The line number in the CSV file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the user at the specified line number
+\end{DoxyReturn}
+This function opens the "{}names.\+csv"{} file and reads the specified line. It returns the name of the user at that line number. If the file cannot be opened or if the line number is invalid, it returns "{}\+None"{}. \Hypertarget{classEditProfile_ad7c745541846fa56160fa2d5f9c7699d}\label{classEditProfile_ad7c745541846fa56160fa2d5f9c7699d} 
+\index{EditProfile@{EditProfile}!loadFirstLine@{loadFirstLine}}
+\index{loadFirstLine@{loadFirstLine}!EditProfile@{EditProfile}}
+\doxysubsubsection{\texorpdfstring{loadFirstLine()}{loadFirstLine()}}
+{\footnotesize\ttfamily void Edit\+Profile\+::load\+First\+Line (\begin{DoxyParamCaption}\item[{QString}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loads the first line of the CSV file and updates the profile information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the user whose profile information is to be loaded\\
+\hline
+\end{DoxyParams}
+This function opens the "{}names.\+csv"{} file and reads the first line. It updates the profile information (name, date joined, job status, access level) based on the data in the CSV file. If no matching images are found, it falls back to a default sample icon. \Hypertarget{classEditProfile_acfa856f815f9f8b2ada36478e3a05b2e}\label{classEditProfile_acfa856f815f9f8b2ada36478e3a05b2e} 
+\index{EditProfile@{EditProfile}!refreshCSV@{refreshCSV}}
+\index{refreshCSV@{refreshCSV}!EditProfile@{EditProfile}}
+\doxysubsubsection{\texorpdfstring{refreshCSV}{refreshCSV}}
+{\footnotesize\ttfamily void Edit\+Profile\+::refresh\+CSV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Refreshes the CSV file. 
+
+Refreshes the CSV file by scanning the dataset directory and updating the file with folder names and metadata. \Hypertarget{classEditProfile_a9beb3dc66a826c144b696241c4dd8de4}\label{classEditProfile_a9beb3dc66a826c144b696241c4dd8de4} 
+\index{EditProfile@{EditProfile}!showAccessLevelPopup@{showAccessLevelPopup}}
+\index{showAccessLevelPopup@{showAccessLevelPopup}!EditProfile@{EditProfile}}
+\doxysubsubsection{\texorpdfstring{showAccessLevelPopup()}{showAccessLevelPopup()}}
+{\footnotesize\ttfamily void Edit\+Profile\+::show\+Access\+Level\+Popup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays a popup showing the the current access level of the user and allows the user to edit it. 
+
+This function creates a popup window that displays the current access level of the user. It allows the user to edit the access level by selecting from a list of options. The selected access level is then saved to the CSV file. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{EditProfile_8h}{Edit\+Profile.\+h}}\item 
+src/\mbox{\hyperlink{EditProfile_8cpp}{Edit\+Profile.\+cpp}}\end{DoxyCompactItemize}

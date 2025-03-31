@@ -1,0 +1,37 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+
+
+Main method of the program.  
+
+
+{\ttfamily \#include $<$QApplication$>$}\newline
+{\ttfamily \#include "{}mainwindow.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int {\bfseries main} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main method of the program. 
+
+\begin{DoxyAuthor}{Author}
+Lukas Bozinov 
+\end{DoxyAuthor}
+Initializes the Qt application, applies a dark mode theme to the UI, ensures the native title bar is independant of Qt styles and launches the \doxylink{classMainWindow}{Main\+Window} instance. Handles user interactions by entering the QT event loop.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of command-\/line arguments. \\
+\hline
+{\em argv} & The array of command-\/line argument strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The success of app.\+exec(). 
+\end{DoxyReturn}

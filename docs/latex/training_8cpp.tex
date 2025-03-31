@@ -1,0 +1,64 @@
+\doxysection{src/training.cpp File Reference}
+\hypertarget{training_8cpp}{}\label{training_8cpp}\index{src/training.cpp@{src/training.cpp}}
+
+
+This class implements the training class to train the face recognizer model.  
+
+
+{\ttfamily \#include $<$opencv2/face.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/imgproc.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/objdetect.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include "{}Face\+Detector.\+h"{}}\newline
+Include dependency graph for training.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{training_8cpp_a82008b08663945921770c55794cb669a}{training}} ()
+\begin{DoxyCompactList}\small\item\em Trains the face recognizer model using labeled images. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{training_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Calls the training function to train the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class implements the training class to train the face recognizer model. 
+
+\begin{DoxyAuthor}{Author}
+Naween Sarwari 
+\end{DoxyAuthor}
+Creates and verifies paths for the dataset, cascade, model and labels. Afterwards it iterates through every subdirectory in the dataset folder with each subdirectory representing a different employee. Within each subdirectory, it filters out every non-\/image file, grayscales the image files and filters out the images without a face or has an unreadable face. The remaining images are resized and added to the training dataset while getting a unique label\+ID. Finally dots are added to the faces and the model is trained using the training dataset and saved in the path defined at the beginning. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{training_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{training_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{training.cpp@{training.cpp}!main@{main}}
+\index{main@{main}!training.cpp@{training.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls the training function to train the model. 
+
+\begin{DoxyReturn}{Returns}
+int 0 upon success, -\/1 upon failure 
+\end{DoxyReturn}
+\Hypertarget{training_8cpp_a82008b08663945921770c55794cb669a}\label{training_8cpp_a82008b08663945921770c55794cb669a} 
+\index{training.cpp@{training.cpp}!training@{training}}
+\index{training@{training}!training.cpp@{training.cpp}}
+\doxysubsubsection{\texorpdfstring{training()}{training()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{classtraining}{training}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Trains the face recognizer model using labeled images. 
+
+This function begins by processing the dataset by validating the existence of the required paths (dataset, cascade, model, labels). Afterwhich, it iterates throughout each subdirectory in the dataset directory with each subdirectory representing a unique employee. Next, all images that are not suitable to be used are filtered out and the remaining images are resized, grayscaled and added to the training dataset with a unique ID label. Finally, the facerecognizer is trained using the training dataset and saved to the validated path for the model.
+
+\begin{DoxyReturn}{Returns}
+int 0 upon successfully training the model, -\/1 upon failure to train the model. 
+\end{DoxyReturn}

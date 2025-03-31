@@ -1,0 +1,56 @@
+\doxysection{pin.\+h}
+\hypertarget{pin_8h_source}{}\label{pin_8h_source}\index{src/pin.h@{src/pin.h}}
+\mbox{\hyperlink{pin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\ \#ifndef\ PIN\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\ \#define\ PIN\_H}}
+\DoxyCodeLine{00004\ \ }
+\DoxyCodeLine{00005\ \ \textcolor{comment}{//\ Forward\ declarations\ to\ avoid\ unnecessary\ includes}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\ \#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\ \#include\ <QWidget>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\ \#include\ <QMessageBox>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\ \#include\ <QTimer>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\ \#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \#include\ <QLabel>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \#include\ <QFrame>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \#include\ <QLineEdit>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \#include\ <QPushButton>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \#include\ <QInputDialog>}}
+\DoxyCodeLine{00016\ \ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{EditProfile_8h}{EditProfile.h}}"{}}}
+\DoxyCodeLine{00018\ \ }
+\DoxyCodeLine{00019\ \ }
+\DoxyCodeLine{00020\ \ }
+\DoxyCodeLine{00021\ \ \textcolor{keyword}{class\ }QFrame;}
+\DoxyCodeLine{00022\ \ \textcolor{keyword}{class\ }QLineEdit;\ \textcolor{comment}{//\ Forward\ declaration\ to\ avoid\ unnecessary\ includes}}
+\DoxyCodeLine{00023\ \ \textcolor{keyword}{class\ }QPushButton;\ \textcolor{comment}{//\ Forward\ declaration\ for\ QPushButton}}
+\DoxyCodeLine{00024\ \ }
+\DoxyCodeLine{00035\ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPinWindow}{PinWindow}}\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00037\ \ }
+\DoxyCodeLine{00038\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classPinWindow}{PinWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00045\ \ }
+\DoxyCodeLine{00046\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ \ \ \ \ \ QFrame*\ \mbox{\hyperlink{classPinWindow_a4520c15e624477390dd02e4deabd8c1d}{createMainFrame}}();\ \ \textcolor{comment}{//\ Creates\ the\ main\ frame}}
+\DoxyCodeLine{00053\ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \ QFrame*\ \mbox{\hyperlink{classPinWindow_a25549a5b9d7b17bab262274ba56edcd3}{createTopSection}}();\ \textcolor{comment}{//\ Creates\ the\ warning\ label\ section}}
+\DoxyCodeLine{00060\ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ QFrame*\ \mbox{\hyperlink{classPinWindow_ae208fdd73c64b33caa4ce0097cb5d7f6}{createMiddleSection}}();\ \textcolor{comment}{//\ Creates\ the\ input\ field\ and\ button\ section}}
+\DoxyCodeLine{00067\ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPinWindow_abda09706e1c2d2fdf70611f6a99a9dc5}{validatePassword}}(\textcolor{keyword}{const}\ QString\ \&input,\ QPushButton\ *enterButton);\ \textcolor{comment}{//\ Handles\ password\ validation}}
+\DoxyCodeLine{00075\ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \textcolor{keywordtype}{int}\ countdown;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ countdown\ value\ for\ timer\ when\ locked\ out}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \textcolor{keywordtype}{int}\ counter;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Login\ attempt\ counter}}
+\DoxyCodeLine{00078\ \ \ \ \ \ QMessageBox\ *popup;\ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ Message\ Box\ that\ informs\ user\ of\ locked\ status}}
+\DoxyCodeLine{00079\ \ \ \ \ \ QTimer\ *timer;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ timer\ used\ during\ the\ locked\ status}}
+\DoxyCodeLine{00080\ \ }
+\DoxyCodeLine{00081\ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00087\ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPinWindow_aad1048cf01808d5182151e72e9f52450}{updateCountdown}}();}
+\DoxyCodeLine{00088\ \ \};}
+\DoxyCodeLine{00089\ \ }
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\ \#endif\ }\textcolor{comment}{//\ PIN\_H}}
+\DoxyCodeLine{00091\ \ }
+
+\end{DoxyCode}

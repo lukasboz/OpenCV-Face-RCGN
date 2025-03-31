@@ -1,0 +1,37 @@
+\doxysection{Face\+Recognizer\+Wrapper.\+h}
+\hypertarget{FaceRecognizerWrapper_8h_source}{}\label{FaceRecognizerWrapper_8h_source}\index{src/FaceRecognizerWrapper.h@{src/FaceRecognizerWrapper.h}}
+\mbox{\hyperlink{FaceRecognizerWrapper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <opencv2/face.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFaceRecognizerWrapper}{FaceRecognizerWrapper}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classFaceRecognizerWrapper}{FaceRecognizerWrapper}}(\textcolor{keywordtype}{int}\ radius\ =\ 2,\ \textcolor{keywordtype}{int}\ neighbors\ =\ 2,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ grid\_x\ =\ 7,\ \textcolor{keywordtype}{int}\ grid\_y\ =\ 7,\ \textcolor{keywordtype}{double}\ threshold\ =\ 17.0);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFaceRecognizerWrapper_a95ebb171dab76c17f6b0c94735df8fd5}{loadModel}}(\textcolor{keyword}{const}\ std::string\&\ modelPath);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFaceRecognizerWrapper_a5898bd12246bf81bf052c231925fbb38}{loadLabels}}(\textcolor{keyword}{const}\ std::string\&\ labelsPath);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFaceRecognizerWrapper_afcb74613420f366ead4332845d08fd67}{predict}}(\textcolor{keyword}{const}\ cv::Mat\&\ faceROI,\ \textcolor{keywordtype}{double}\&\ confidence)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ std::string\ \mbox{\hyperlink{classFaceRecognizerWrapper_a69b135356f02f9fb61e1ddd9b125a570}{getLabelName}}(\textcolor{keywordtype}{int}\ label)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00077\ \ \ \ \ cv::Ptr<cv::face::LBPHFaceRecognizer>\ recognizer;}
+\DoxyCodeLine{00078\ \ \ \ \ std::map<int,\ std::string>\ labels;}
+\DoxyCodeLine{00079\ \};}
+
+\end{DoxyCode}

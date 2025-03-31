@@ -1,0 +1,31 @@
+\doxysection{src/pin.cpp File Reference}
+\hypertarget{pin_8cpp}{}\label{pin_8cpp}\index{src/pin.cpp@{src/pin.cpp}}
+
+
+This class implements the \doxylink{classPinWindow}{Pin\+Window} class to authenticate user access.  
+
+
+{\ttfamily \#include "{}pin.\+h"{}}\newline
+{\ttfamily \#include $<$QVBox\+Layout$>$}\newline
+{\ttfamily \#include $<$QLabel$>$}\newline
+{\ttfamily \#include $<$QFrame$>$}\newline
+{\ttfamily \#include $<$QLine\+Edit$>$}\newline
+{\ttfamily \#include $<$QPush\+Button$>$}\newline
+{\ttfamily \#include $<$QInput\+Dialog$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$QMessage\+Box$>$}\newline
+{\ttfamily \#include $<$QTimer$>$}\newline
+{\ttfamily \#include "{}Edit\+Profile.\+h"{}}\newline
+Include dependency graph for pin.\+cpp\+:
+% FIG 0
+
+
+\doxysubsection{Detailed Description}
+This class implements the \doxylink{classPinWindow}{Pin\+Window} class to authenticate user access. 
+
+\begin{DoxyAuthor}{Author}
+Kevin Russel 
+
+Woorim Cho 
+\end{DoxyAuthor}
+This Source file contains the implementation of the pin class. It validates the user, locking them out for 30 seconds when number of attempts reaches 2 before resetting the attempt count. Otherwise, letting the user through to the next page. 

@@ -1,0 +1,133 @@
+\doxysection{Face\+Recognizer\+Wrapper Class Reference}
+\hypertarget{classFaceRecognizerWrapper}{}\label{classFaceRecognizerWrapper}\index{FaceRecognizerWrapper@{FaceRecognizerWrapper}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFaceRecognizerWrapper_a313314e212cb57a7f01f272f0d9bf609}{Face\+Recognizer\+Wrapper}} (int radius=2, int neighbors=2, int grid\+\_\+x=7, int grid\+\_\+y=7, double threshold=17.\+0)
+\begin{DoxyCompactList}\small\item\em Constructor sets up Open\+CV LBPH with your chosen parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFaceRecognizerWrapper_a95ebb171dab76c17f6b0c94735df8fd5}{load\+Model}} (const std\+::string \&model\+Path)
+\begin{DoxyCompactList}\small\item\em Load the trained model (embeddings.\+xml) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFaceRecognizerWrapper_a5898bd12246bf81bf052c231925fbb38}{load\+Labels}} (const std\+::string \&labels\+Path)
+\begin{DoxyCompactList}\small\item\em Load the label mapping from labels.\+txt. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFaceRecognizerWrapper_afcb74613420f366ead4332845d08fd67}{predict}} (const cv\+::\+Mat \&face\+ROI, double \&confidence) const
+\begin{DoxyCompactList}\small\item\em Predict the label for a cropped face ROI. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFaceRecognizerWrapper_a69b135356f02f9fb61e1ddd9b125a570}{get\+Label\+Name}} (int label) const
+\begin{DoxyCompactList}\small\item\em Get the name associated with a label. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classFaceRecognizerWrapper_a511c3c779b78342c340d70c7657ac699}\label{classFaceRecognizerWrapper_a511c3c779b78342c340d70c7657ac699} 
+cv\+::\+Ptr$<$ cv\+::face\+::\+LBPHFace\+Recognizer $>$ {\bfseries recognizer}
+\item 
+\Hypertarget{classFaceRecognizerWrapper_a14a5b8c5971c612f12fad37034129db4}\label{classFaceRecognizerWrapper_a14a5b8c5971c612f12fad37034129db4} 
+std\+::map$<$ int, std\+::string $>$ {\bfseries labels}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFaceRecognizerWrapper_a313314e212cb57a7f01f272f0d9bf609}\label{classFaceRecognizerWrapper_a313314e212cb57a7f01f272f0d9bf609} 
+\index{FaceRecognizerWrapper@{FaceRecognizerWrapper}!FaceRecognizerWrapper@{FaceRecognizerWrapper}}
+\index{FaceRecognizerWrapper@{FaceRecognizerWrapper}!FaceRecognizerWrapper@{FaceRecognizerWrapper}}
+\doxysubsubsection{\texorpdfstring{FaceRecognizerWrapper()}{FaceRecognizerWrapper()}}
+{\footnotesize\ttfamily Face\+Recognizer\+Wrapper\+::\+Face\+Recognizer\+Wrapper (\begin{DoxyParamCaption}\item[{int}]{radius = {\ttfamily 2},  }\item[{int}]{neighbors = {\ttfamily 2},  }\item[{int}]{grid\+\_\+x = {\ttfamily 7},  }\item[{int}]{grid\+\_\+y = {\ttfamily 7},  }\item[{double}]{threshold = {\ttfamily 17.0} }\end{DoxyParamCaption})}
+
+
+
+Constructor sets up Open\+CV LBPH with your chosen parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius of the circle used for the Local Binary Patterns \\
+\hline
+{\em neighbors} & The number of neighbors to consider for the Local Binary Patterns \\
+\hline
+{\em grid\+\_\+x} & The number of cells in the x direction for the Local Binary Patterns \\
+\hline
+{\em grid\+\_\+y} & The number of cells in the y direction for the Local Binary Patterns \\
+\hline
+{\em threshold} & The threshold for the confidence level\\
+\hline
+\end{DoxyParams}
+The consutrctor initializes the LBHPFace\+Recognizer with the specified parameters. The default values are\+:
+\begin{DoxyItemize}
+\item radius\+: 2
+\item neighbors\+: 2
+\item grid\+\_\+x\+: 7
+\item grid\+\_\+y\+: 7
+\item threshold\+: 17.\+0
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The default values are the same as those used in the Open\+CV LBPHFace\+Recognizer. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFaceRecognizerWrapper_a69b135356f02f9fb61e1ddd9b125a570}\label{classFaceRecognizerWrapper_a69b135356f02f9fb61e1ddd9b125a570} 
+\index{FaceRecognizerWrapper@{FaceRecognizerWrapper}!getLabelName@{getLabelName}}
+\index{getLabelName@{getLabelName}!FaceRecognizerWrapper@{FaceRecognizerWrapper}}
+\doxysubsubsection{\texorpdfstring{getLabelName()}{getLabelName()}}
+{\footnotesize\ttfamily std\+::string Face\+Recognizer\+Wrapper\+::get\+Label\+Name (\begin{DoxyParamCaption}\item[{int}]{label }\end{DoxyParamCaption}) const}
+
+
+
+Get the name associated with a label. 
+
+Retrieves the name associated with a given label. If the label is not found in the mapping, "{}\+Unknown"{} is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em label} & The label for which to retrieve the name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name associated with the label, or "{}\+Unknown"{} if not found 
+\end{DoxyReturn}
+\Hypertarget{classFaceRecognizerWrapper_a5898bd12246bf81bf052c231925fbb38}\label{classFaceRecognizerWrapper_a5898bd12246bf81bf052c231925fbb38} 
+\index{FaceRecognizerWrapper@{FaceRecognizerWrapper}!loadLabels@{loadLabels}}
+\index{loadLabels@{loadLabels}!FaceRecognizerWrapper@{FaceRecognizerWrapper}}
+\doxysubsubsection{\texorpdfstring{loadLabels()}{loadLabels()}}
+{\footnotesize\ttfamily void Face\+Recognizer\+Wrapper\+::load\+Labels (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{labels\+Path }\end{DoxyParamCaption})}
+
+
+
+Load the label mapping from labels.\+txt. 
+
+Loads the label-\/to-\/name mapping from a text file. Each line in the file should contain an integer label followed by a string name, separated by whitespace. If the file cannot be opened, an error message is printed. Each mapping is stored in the labels map, where the key is the label and the value is the name. \Hypertarget{classFaceRecognizerWrapper_a95ebb171dab76c17f6b0c94735df8fd5}\label{classFaceRecognizerWrapper_a95ebb171dab76c17f6b0c94735df8fd5} 
+\index{FaceRecognizerWrapper@{FaceRecognizerWrapper}!loadModel@{loadModel}}
+\index{loadModel@{loadModel}!FaceRecognizerWrapper@{FaceRecognizerWrapper}}
+\doxysubsubsection{\texorpdfstring{loadModel()}{loadModel()}}
+{\footnotesize\ttfamily void Face\+Recognizer\+Wrapper\+::load\+Model (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{model\+Path }\end{DoxyParamCaption})}
+
+
+
+Load the trained model (embeddings.\+xml) 
+
+Loads a pre-\/trained face recognition model from a file. If the model file is not found or cannot be read, an error message is printed to the console. \Hypertarget{classFaceRecognizerWrapper_afcb74613420f366ead4332845d08fd67}\label{classFaceRecognizerWrapper_afcb74613420f366ead4332845d08fd67} 
+\index{FaceRecognizerWrapper@{FaceRecognizerWrapper}!predict@{predict}}
+\index{predict@{predict}!FaceRecognizerWrapper@{FaceRecognizerWrapper}}
+\doxysubsubsection{\texorpdfstring{predict()}{predict()}}
+{\footnotesize\ttfamily int Face\+Recognizer\+Wrapper\+::predict (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{face\+ROI,  }\item[{double \&}]{confidence }\end{DoxyParamCaption}) const}
+
+
+
+Predict the label for a cropped face ROI. 
+
+Predicts the label for a given face region of interest (ROI). The predicted label and confidence level are returned by reference. If the prediction fails, -\/1 is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em face\+ROI} & The cropped face image to be recognized \\
+\hline
+{\em confidence} & Reference to a double where the confidence level will be stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The predicted label for the face ROI 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{FaceRecognizerWrapper_8h}{Face\+Recognizer\+Wrapper.\+h}}\item 
+src/\mbox{\hyperlink{FaceRecognizerWrapper_8cpp}{Face\+Recognizer\+Wrapper.\+cpp}}\end{DoxyCompactItemize}

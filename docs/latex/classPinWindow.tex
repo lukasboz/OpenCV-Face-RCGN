@@ -1,0 +1,182 @@
+\doxysection{Pin\+Window Class Reference}
+\hypertarget{classPinWindow}{}\label{classPinWindow}\index{PinWindow@{PinWindow}}
+
+
+Inheritance diagram for Pin\+Window\+:
+% FIG 0
+
+
+Collaboration diagram for Pin\+Window\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPinWindow_ace30fe9a4620be64c4d1312250e39a10}{Pin\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct a new Pin Window initializing the variables and setting up the UI layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPinWindow_aad1048cf01808d5182151e72e9f52450}{update\+Countdown}} ()
+\begin{DoxyCompactList}\small\item\em Updates the countdown timer every second and uses it to update the text in the popup. Upon reaching 0, closes and deletes the timer, deletes the message box, and resets attempt counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+QFrame \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPinWindow_a4520c15e624477390dd02e4deabd8c1d}{create\+Main\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Pin Window which will be the main frame containing all UI elements. \end{DoxyCompactList}\item 
+QFrame \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPinWindow_a25549a5b9d7b17bab262274ba56edcd3}{create\+Top\+Section}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the top section of the main frame with a warning message. \end{DoxyCompactList}\item 
+QFrame \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPinWindow_ae208fdd73c64b33caa4ce0097cb5d7f6}{create\+Middle\+Section}} ()
+\begin{DoxyCompactList}\small\item\em Construct the middle section of the main frame with an input field and a button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPinWindow_abda09706e1c2d2fdf70611f6a99a9dc5}{validate\+Password}} (const QString \&input, QPush\+Button \texorpdfstring{$\ast$}{*}enter\+Button)
+\begin{DoxyCompactList}\small\item\em Validates if the inputted password is correct while also handeling incorrect attempts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classPinWindow_a6e5f79b3b7a7121fd0fc52ba5edda777}\label{classPinWindow_a6e5f79b3b7a7121fd0fc52ba5edda777} 
+int {\bfseries countdown}
+\item 
+\Hypertarget{classPinWindow_a90f3260c15539ef5836b77408595e0f1}\label{classPinWindow_a90f3260c15539ef5836b77408595e0f1} 
+int {\bfseries counter}
+\item 
+\Hypertarget{classPinWindow_a65cdd0cac76e3e87a68574eba48c4ce9}\label{classPinWindow_a65cdd0cac76e3e87a68574eba48c4ce9} 
+QMessage\+Box \texorpdfstring{$\ast$}{*} {\bfseries popup}
+\item 
+\Hypertarget{classPinWindow_a65982caadb0edfaf3d808645e0dcd575}\label{classPinWindow_a65982caadb0edfaf3d808645e0dcd575} 
+QTimer \texorpdfstring{$\ast$}{*} {\bfseries timer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPinWindow_ace30fe9a4620be64c4d1312250e39a10}\label{classPinWindow_ace30fe9a4620be64c4d1312250e39a10} 
+\index{PinWindow@{PinWindow}!PinWindow@{PinWindow}}
+\index{PinWindow@{PinWindow}!PinWindow@{PinWindow}}
+\doxysubsubsection{\texorpdfstring{PinWindow()}{PinWindow()}}
+{\footnotesize\ttfamily Pin\+Window\+::\+Pin\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new Pin Window initializing the variables and setting up the UI layout. 
+
+Construct a new \doxylink{classPinWindow}{Pin\+Window} object in dark mode.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Pointer to the parent widget\\
+\hline
+\end{DoxyParams}
+Input a pointer to the parent Widget to create a \doxylink{classPinWindow}{Pin\+Window} that will validate the user before proceeding to the next page.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPinWindow_a4520c15e624477390dd02e4deabd8c1d}\label{classPinWindow_a4520c15e624477390dd02e4deabd8c1d} 
+\index{PinWindow@{PinWindow}!createMainFrame@{createMainFrame}}
+\index{createMainFrame@{createMainFrame}!PinWindow@{PinWindow}}
+\doxysubsubsection{\texorpdfstring{createMainFrame()}{createMainFrame()}}
+{\footnotesize\ttfamily QFrame \texorpdfstring{$\ast$}{*} Pin\+Window\+::create\+Main\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Construct a new Pin Window which will be the main frame containing all UI elements. 
+
+Constructs the main frame of the window in dark mode.
+
+\begin{DoxyReturn}{Returns}
+Pointer to the constructed QFrame
+\end{DoxyReturn}
+Sets the layout and design of the overall window, calls two methods to create the top and middle sections individually.
+
+\begin{DoxyReturn}{Returns}
+QFrame\texorpdfstring{$\ast$}{*} The created main frame. 
+\end{DoxyReturn}
+\Hypertarget{classPinWindow_ae208fdd73c64b33caa4ce0097cb5d7f6}\label{classPinWindow_ae208fdd73c64b33caa4ce0097cb5d7f6} 
+\index{PinWindow@{PinWindow}!createMiddleSection@{createMiddleSection}}
+\index{createMiddleSection@{createMiddleSection}!PinWindow@{PinWindow}}
+\doxysubsubsection{\texorpdfstring{createMiddleSection()}{createMiddleSection()}}
+{\footnotesize\ttfamily QFrame \texorpdfstring{$\ast$}{*} Pin\+Window\+::create\+Middle\+Section (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Construct the middle section of the main frame with an input field and a button. 
+
+Constructs the middle section containing the input field and button in dark mode.
+
+\begin{DoxyReturn}{Returns}
+QFrame\texorpdfstring{$\ast$}{*} Pointer to the constructed QFrame
+\end{DoxyReturn}
+Construct the middle section of the main frame with an input field for the user to input their attempt and a button to submit the user\textquotesingle{}s attempt.
+
+\begin{DoxyReturn}{Returns}
+QFrame\texorpdfstring{$\ast$}{*} The created middle section. 
+\end{DoxyReturn}
+\Hypertarget{classPinWindow_a25549a5b9d7b17bab262274ba56edcd3}\label{classPinWindow_a25549a5b9d7b17bab262274ba56edcd3} 
+\index{PinWindow@{PinWindow}!createTopSection@{createTopSection}}
+\index{createTopSection@{createTopSection}!PinWindow@{PinWindow}}
+\doxysubsubsection{\texorpdfstring{createTopSection()}{createTopSection()}}
+{\footnotesize\ttfamily QFrame \texorpdfstring{$\ast$}{*} Pin\+Window\+::create\+Top\+Section (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructs the top section of the main frame with a warning message. 
+
+Constructs the top section with a warning message in dark mode.
+
+\begin{DoxyReturn}{Returns}
+QFrame\texorpdfstring{$\ast$}{*} Pointer to the constructed QFrame
+\end{DoxyReturn}
+Constructs the top section of the main frame with a warning message that indicates that the user must enter the correct password to proceed.
+
+\begin{DoxyReturn}{Returns}
+QFrame\texorpdfstring{$\ast$}{*} The created top section. 
+\end{DoxyReturn}
+\Hypertarget{classPinWindow_aad1048cf01808d5182151e72e9f52450}\label{classPinWindow_aad1048cf01808d5182151e72e9f52450} 
+\index{PinWindow@{PinWindow}!updateCountdown@{updateCountdown}}
+\index{updateCountdown@{updateCountdown}!PinWindow@{PinWindow}}
+\doxysubsubsection{\texorpdfstring{updateCountdown}{updateCountdown}}
+{\footnotesize\ttfamily void Pin\+Window\+::update\+Countdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Updates the countdown timer every second and uses it to update the text in the popup. Upon reaching 0, closes and deletes the timer, deletes the message box, and resets attempt counter. 
+
+Updates the countdown timer and popup text during lockout.
+
+Every time timer emits a timeout() signal, the countdown decrements and the text in the message box updates accordingly. Once the countdown reaches 0, the timer stops and gets deleted, the popup gets deleted, and the attempt counter restarts. \Hypertarget{classPinWindow_abda09706e1c2d2fdf70611f6a99a9dc5}\label{classPinWindow_abda09706e1c2d2fdf70611f6a99a9dc5} 
+\index{PinWindow@{PinWindow}!validatePassword@{validatePassword}}
+\index{validatePassword@{validatePassword}!PinWindow@{PinWindow}}
+\doxysubsubsection{\texorpdfstring{validatePassword()}{validatePassword()}}
+{\footnotesize\ttfamily void Pin\+Window\+::validate\+Password (\begin{DoxyParamCaption}\item[{const QString \&}]{input,  }\item[{QPush\+Button \texorpdfstring{$\ast$}{*}}]{enter\+Button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Validates if the inputted password is correct while also handeling incorrect attempts. 
+
+Validates if the inputted password is correct.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The user\textquotesingle{}s entered password \\
+\hline
+{\em enter\+Button} & The button used to send the signal to validate the input\\
+\hline
+\end{DoxyParams}
+Validates if the inputted password is correct, upon successful verification, the user is sent to the next screen otherwise the attempt counter increases and once it reaches 2, the user is locked out of any attempts for 30 sec. After the countdown is over, the attempt counter resets and the user is free to make more attempts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The user\textquotesingle{}s password attempt. \\
+\hline
+{\em enter\+Button} & The button used to trigger validation. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{pin_8h}{pin.\+h}}\item 
+src/\mbox{\hyperlink{pin_8cpp}{pin.\+cpp}}\end{DoxyCompactItemize}

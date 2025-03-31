@@ -1,0 +1,36 @@
+\doxysection{src/mainwindow.h File Reference}
+\hypertarget{mainwindow_8h}{}\label{mainwindow_8h}\index{src/mainwindow.h@{src/mainwindow.h}}
+
+
+Header file for the mainwindow class, which is the window that identifies the user based on the trained model from the training, using the user\textquotesingle{}s face.  
+
+
+{\ttfamily \#include $<$QMain\+Window$>$}\newline
+{\ttfamily \#include $<$QLabel$>$}\newline
+{\ttfamily \#include $<$QTimer$>$}\newline
+{\ttfamily \#include $<$QPush\+Button$>$}\newline
+{\ttfamily \#include $<$QProgress\+Bar$>$}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}Face\+Detector.\+h"{}}\newline
+{\ttfamily \#include "{}Face\+Recognizer\+Wrapper.\+h"{}}\newline
+{\ttfamily \#include "{}facemanager.\+h"{}}\newline
+Include dependency graph for mainwindow.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classMainWindow}{Main\+Window}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the mainwindow class, which is the window that identifies the user based on the trained model from the training, using the user\textquotesingle{}s face. 
+
+\begin{DoxyAuthor}{Author}
+Lukas Bozinov 
+\end{DoxyAuthor}
+This Header file defines the mainwindow class which creates the Mainwindow of the project. Within, the face and employee database can be added to or deleted from, the user can access their profile page after they are recognized by the model, the model can be retrained, and the user can access the doors that they have permission to access. 

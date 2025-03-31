@@ -1,0 +1,60 @@
+\doxysection{Edit\+Profile.\+h}
+\hypertarget{EditProfile_8h_source}{}\label{EditProfile_8h_source}\index{src/EditProfile.h@{src/EditProfile.h}}
+\mbox{\hyperlink{EditProfile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EDITPROFILE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EDITPROFILE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QScrollArea>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEditProfile}{EditProfile}}:\ \textcolor{keyword}{public}\ QWidget\{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classEditProfile}{EditProfile}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEditProfile_aff42f053f738d303d7262c926a6f687b}{countLinesInFile}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEditProfile_a9beb3dc66a826c144b696241c4dd8de4}{showAccessLevelPopup}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEditProfile_a191302b76c7020ef0d2be15b940540b5}{editAccessLevel}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEditProfile_a9d36e97e22408ac02e2c8674839619b2}{editCSVFile}}(\textcolor{keyword}{const}\ QString\&,\ \textcolor{keyword}{const}\ QString\&\ job,\ \textcolor{keyword}{const}\ QString\&\ access);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEditProfile_aa6513ea4c8bd1578891e2d22cdd687b9}{closeEvent}}(QCloseEvent\ *event);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEditProfile_a8de8317fe8cac479f8540047f2a1eea0}{onBackButtonClicked}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEditProfile_acfa856f815f9f8b2ada36478e3a05b2e}{refreshCSV}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ QFrame*\ createWindowFrame();}
+\DoxyCodeLine{00082\ \ \ \ \ QFrame*\ \mbox{\hyperlink{classEditProfile_a7ebef621052b4e883d18a724f29f2c23}{CreateTopSection}}();}
+\DoxyCodeLine{00083\ \ \ \ \ QFrame*\ \mbox{\hyperlink{classEditProfile_aa5ea4c9eb11b6769c520cb652e534e2a}{createMiddleSection}}();}
+\DoxyCodeLine{00084\ \ \ \ \ QScrollArea\ *scrollArea;}
+\DoxyCodeLine{00085\ \ \ \ \ QString\ \mbox{\hyperlink{classEditProfile_a9e06474c3727425c24593207f384cef9}{getName}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00086\ \ \ \ \ QLabel\ *firstLineLabel;}
+\DoxyCodeLine{00087\ \ \ \ \ QLabel\ *imageLabel;}
+\DoxyCodeLine{00088\ \ \ \ \ QLabel*\ nameLabel;}
+\DoxyCodeLine{00089\ \ \ \ \ QLabel*\ dateLabel;}
+\DoxyCodeLine{00090\ \ \ \ \ QLabel*\ jobLabel;}
+\DoxyCodeLine{00091\ \ \ \ \ QLabel*\ accessLabel;}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEditProfile_ad7c745541846fa56160fa2d5f9c7699d}{loadFirstLine}}(QString\ name);}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_fromBackButton\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

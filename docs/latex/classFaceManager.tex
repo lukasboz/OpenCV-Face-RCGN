@@ -1,0 +1,69 @@
+\doxysection{Face\+Manager Class Reference}
+\hypertarget{classFaceManager}{}\label{classFaceManager}\index{FaceManager@{FaceManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFaceManager_a2907abec72d011dfe2f8119677548065}{Face\+Manager}} (QWidget \texorpdfstring{$\ast$}{*}parent, const QString \&dataset\+Path)
+\begin{DoxyCompactList}\small\item\em Constructor accepts a parent Qwidget and the path to the dataset folder. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFaceManager_a0002232302939c10a0b11937672f7c0b}{add\+Face}} ()
+\begin{DoxyCompactList}\small\item\em Open a Qtwidget file dialog to select a folder in the dataset to add images to. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFaceManager_aacbc8b0fa9e2fa9bb8912c1b51b618d7}{delete\+Face}} ()
+\begin{DoxyCompactList}\small\item\em Open a Qtwidget file dialog to select a folder in the dataset to delete images from. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classFaceManager_ab526efc4d98a16999b8c80ff4ed6a3c7}\label{classFaceManager_ab526efc4d98a16999b8c80ff4ed6a3c7} 
+QWidget \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+parent}
+\item 
+\Hypertarget{classFaceManager_ad3a564c7cea3443be6c64078b77a09c2}\label{classFaceManager_ad3a564c7cea3443be6c64078b77a09c2} 
+QString {\bfseries m\+\_\+dataset\+Path}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFaceManager_a2907abec72d011dfe2f8119677548065}\label{classFaceManager_a2907abec72d011dfe2f8119677548065} 
+\index{FaceManager@{FaceManager}!FaceManager@{FaceManager}}
+\index{FaceManager@{FaceManager}!FaceManager@{FaceManager}}
+\doxysubsubsection{\texorpdfstring{FaceManager()}{FaceManager()}}
+{\footnotesize\ttfamily Face\+Manager\+::\+Face\+Manager (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent,  }\item[{const QString \&}]{dataset\+Path }\end{DoxyParamCaption})}
+
+
+
+Constructor accepts a parent Qwidget and the path to the dataset folder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget for dialog boxes. \\
+\hline
+{\em dataset\+Path} & The path to the dataset folder where images will be added or deleted. This should be a valid directory path, for obvious reasons.\\
+\hline
+\end{DoxyParams}
+The constructor initialize the Facemanager object with the given parent widget and dataset path. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFaceManager_a0002232302939c10a0b11937672f7c0b}\label{classFaceManager_a0002232302939c10a0b11937672f7c0b} 
+\index{FaceManager@{FaceManager}!addFace@{addFace}}
+\index{addFace@{addFace}!FaceManager@{FaceManager}}
+\doxysubsubsection{\texorpdfstring{addFace()}{addFace()}}
+{\footnotesize\ttfamily void Face\+Manager\+::add\+Face (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Open a Qtwidget file dialog to select a folder in the dataset to add images to. 
+
+This function allows the user to select one or more images to add to a specific folder in the dataset. The user is prompted to select a folder within the dataset directory, and the selected images are copied to that folder. If a file with the same name already exists, it will be replaced. \Hypertarget{classFaceManager_aacbc8b0fa9e2fa9bb8912c1b51b618d7}\label{classFaceManager_aacbc8b0fa9e2fa9bb8912c1b51b618d7} 
+\index{FaceManager@{FaceManager}!deleteFace@{deleteFace}}
+\index{deleteFace@{deleteFace}!FaceManager@{FaceManager}}
+\doxysubsubsection{\texorpdfstring{deleteFace()}{deleteFace()}}
+{\footnotesize\ttfamily void Face\+Manager\+::delete\+Face (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Open a Qtwidget file dialog to select a folder in the dataset to delete images from. 
+
+This function allows the user to select one or more images to delete from a specific folder in the dataset. The user is prompted to select a folder within the dataset directory, and the selected images are deleted from that folder. If a file with the same name does not exist, it will be ignored. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{facemanager_8h}{facemanager.\+h}}\item 
+src/\mbox{\hyperlink{facemanager_8cpp}{facemanager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\index{src/mainwindow.h@{src/mainwindow.h}}
+\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QProgressBar>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ Include\ your\ face\ detection/recognition\ headers}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{FaceDetector_8h}{FaceDetector.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{FaceRecognizerWrapper_8h}{FaceRecognizerWrapper.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{facemanager_8h}{facemanager.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classMainWindow}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a02cb977adb2dce4e90edbb5515872a2c}{updateFrame}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ \ \ \ \ QString\ \mbox{\hyperlink{classMainWindow_a36aa38227bf5b5ef69434ba97a06d5df}{getPermissionLevelForName}}(\textcolor{keyword}{const}\ QString\ \&name);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \ \ \ \ QString\ \mbox{\hyperlink{classMainWindow_ae7514af99c8ebf13500b807866c5e351}{getDoorNumberForName}}(\textcolor{keyword}{const}\ QString\ \&name);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_aef4cd5d97716464ac7bd8c475fb85186}{openPinWindow}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a61d8584317e4725f91db4411de58b018}{openTrainProject}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a8a643911f70fc3ca7ef11f929ecec7c6}{addFace}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a11983d10c2b67ed5df1fd211ca126306}{deleteFace}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//\ UI\ Elements}}
+\DoxyCodeLine{00092\ \ \ \ \ QLabel\ *videoLabel;\ \ \ \ \textcolor{comment}{//\ To\ display\ the\ camera\ feed}}
+\DoxyCodeLine{00093\ \ \ \ \ QLabel\ *nameLabel;\ \ \ \ \ \textcolor{comment}{//\ Static\ text\ for\ name\ (updated\ during\ execution)}}
+\DoxyCodeLine{00094\ \ \ \ \ QLabel\ *permLabel;\ \ \ \ \ \textcolor{comment}{//\ Static\ text\ for\ permission\ level\ (updated\ during\ execution)}}
+\DoxyCodeLine{00095\ \ \ \ \ QPushButton\ *adminButton;}
+\DoxyCodeLine{00096\ \ \ \ \ QPushButton\ *trainButton;}
+\DoxyCodeLine{00097\ \ \ \ \ QTimer\ *timer;}
+\DoxyCodeLine{00098\ \ \ \ \ QProgressBar\ *trainProgressBar;}
+\DoxyCodeLine{00099\ \ \ \ \ QPushButton\ *addFaceButton;}
+\DoxyCodeLine{00100\ \ \ \ \ QPushButton\ *deleteFaceButton;}
+\DoxyCodeLine{00101\ \ \ \ \ QLabel\ *doorLabel1;}
+\DoxyCodeLine{00102\ \ \ \ \ QLabel\ *doorLabel2;}
+\DoxyCodeLine{00103\ \ \ \ \ QLabel\ *doorLabel3;}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//\ OpenCV\ /\ face\ recognition\ members}}
+\DoxyCodeLine{00106\ \ \ \ \ cv::VideoCapture\ cap;}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{classFaceDetector}{FaceDetector}}\ *detector;}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{classFaceRecognizerWrapper}{FaceRecognizerWrapper}}\ *faceRec;}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{classFaceManager}{FaceManager}}\ *faceManager;}
+\DoxyCodeLine{00110\ \ \ \ \ std::vector<std::string>\ nameBuffer;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a3a304253c9e7caeef028f75358bf1fd5}{setupUI}}();}
+\DoxyCodeLine{00117\ \};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,30 @@
+\doxysection{src/\+Face\+Recognizer\+Wrapper.h File Reference}
+\hypertarget{FaceRecognizerWrapper_8h}{}\label{FaceRecognizerWrapper_8h}\index{src/FaceRecognizerWrapper.h@{src/FaceRecognizerWrapper.h}}
+
+
+Provides a wrapper for Open\+CV\textquotesingle{}s Face recognizer as well as managing label-\/to-\/name mapping.  
+
+
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$opencv2/face.\+hpp$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+Include dependency graph for Face\+Recognizer\+Wrapper.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classFaceRecognizerWrapper}{Face\+Recognizer\+Wrapper}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides a wrapper for Open\+CV\textquotesingle{}s Face recognizer as well as managing label-\/to-\/name mapping. 
+
+This class is designed to initialize the Open\+CV library\textquotesingle{}s LBPHFace\+Recognizer and load the pre-\/trained model on face data and its corresponding face mapping. When a face is detected, it is passed to the predict method, which returns the predicted label\textquotesingle{}s name and its confidence level.
+
+\begin{DoxyAuthor}{Author}
+Naween Sawari 
+\end{DoxyAuthor}

@@ -1,0 +1,29 @@
+\doxysection{Face\+Detector.\+h}
+\hypertarget{FaceDetector_8h_source}{}\label{FaceDetector_8h_source}\index{src/FaceDetector.h@{src/FaceDetector.h}}
+\mbox{\hyperlink{FaceDetector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <opencv2/opencv.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFaceDetector}{FaceDetector}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classFaceDetector}{FaceDetector}}(\textcolor{keyword}{const}\ std::string\&\ cascadePath\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFaceDetector_a3ae3d7c8e8c4f05ee42396f0a362fc6e}{loadCascade}}(\textcolor{keyword}{const}\ std::string\&\ cascadePath);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \ \ \ \ std::vector<cv::Rect>\ \mbox{\hyperlink{classFaceDetector_a67958f1b3d12f62d72ea12d3a7d5163e}{detectFaces}}(\textcolor{keyword}{const}\ cv::Mat\&\ grayFrame);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ cv::CascadeClassifier\ faceCascade;}
+\DoxyCodeLine{00050\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,274 @@
+\doxysection{Main\+Window Class Reference}
+\hypertarget{classMainWindow}{}\label{classMainWindow}\index{MainWindow@{MainWindow}}
+
+
+Inheritance diagram for Main\+Window\+:
+% FIG 0
+
+
+Collaboration diagram for Main\+Window\+:
+% FIG 1
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classMainWindow_aef4cd5d97716464ac7bd8c475fb85186}{open\+Pin\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Opens the pinwindow to verify the user before accessing their profile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a61d8584317e4725f91db4411de58b018}{open\+Train\+Project}} ()
+\begin{DoxyCompactList}\small\item\em Retrains the model so that editting the databases can affect what the model detects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a8a643911f70fc3ca7ef11f929ecec7c6}{add\+Face}} ()
+\begin{DoxyCompactList}\small\item\em Enables the user to add a face or a profile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a11983d10c2b67ed5df1fd211ca126306}{delete\+Face}} ()
+\begin{DoxyCompactList}\small\item\em Enables the user to delete a face or a profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct a new Main Window object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\texorpdfstring{$\sim$}{\string~}\+Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Main Window\+:\+: Main Window object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMainWindow_a02cb977adb2dce4e90edbb5515872a2c}{update\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Updates the frame from the camera and processes the face recognition. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classMainWindow_a36aa38227bf5b5ef69434ba97a06d5df}{get\+Permission\+Level\+For\+Name}} (const QString \&name)
+\begin{DoxyCompactList}\small\item\em Get the Permission Level For Name object. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classMainWindow_ae7514af99c8ebf13500b807866c5e351}{get\+Door\+Number\+For\+Name}} (const QString \&name)
+\begin{DoxyCompactList}\small\item\em Get the Door Number For Name object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMainWindow_a3a304253c9e7caeef028f75358bf1fd5}{setup\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Creates the layout that the UI will use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMainWindow_ae133d3ab6a3ce2e6b80bdad105dc68df}\label{classMainWindow_ae133d3ab6a3ce2e6b80bdad105dc68df} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries video\+Label}
+\item 
+\Hypertarget{classMainWindow_a36c7c011282a2064fb5f8cb678e7edb0}\label{classMainWindow_a36c7c011282a2064fb5f8cb678e7edb0} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries name\+Label}
+\item 
+\Hypertarget{classMainWindow_a53982d505180bc3e633859918a1ed295}\label{classMainWindow_a53982d505180bc3e633859918a1ed295} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries perm\+Label}
+\item 
+\Hypertarget{classMainWindow_ab5ff2cfe03e8133bb6d47da3d1498435}\label{classMainWindow_ab5ff2cfe03e8133bb6d47da3d1498435} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries admin\+Button}
+\item 
+\Hypertarget{classMainWindow_a0ce76ca2f9bd87ccab1e0b410fc682db}\label{classMainWindow_a0ce76ca2f9bd87ccab1e0b410fc682db} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries train\+Button}
+\item 
+\Hypertarget{classMainWindow_a356578805ed1248a7f2807434cb0e5ee}\label{classMainWindow_a356578805ed1248a7f2807434cb0e5ee} 
+QTimer \texorpdfstring{$\ast$}{*} {\bfseries timer}
+\item 
+\Hypertarget{classMainWindow_af22de13c00ca39a18090e49f69849387}\label{classMainWindow_af22de13c00ca39a18090e49f69849387} 
+QProgress\+Bar \texorpdfstring{$\ast$}{*} {\bfseries train\+Progress\+Bar}
+\item 
+\Hypertarget{classMainWindow_a0542508a60f216e781152dc14586b1bb}\label{classMainWindow_a0542508a60f216e781152dc14586b1bb} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries add\+Face\+Button}
+\item 
+\Hypertarget{classMainWindow_abd3c6045ed2d6608e012d7f583816174}\label{classMainWindow_abd3c6045ed2d6608e012d7f583816174} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries delete\+Face\+Button}
+\item 
+\Hypertarget{classMainWindow_a92be68ede1969811f647f4f29b9cd6fa}\label{classMainWindow_a92be68ede1969811f647f4f29b9cd6fa} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries door\+Label1}
+\item 
+\Hypertarget{classMainWindow_a6415bda778f1fef8f6070798db5d7d01}\label{classMainWindow_a6415bda778f1fef8f6070798db5d7d01} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries door\+Label2}
+\item 
+\Hypertarget{classMainWindow_aea2628f47cac39ab37b26de46bf8a109}\label{classMainWindow_aea2628f47cac39ab37b26de46bf8a109} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries door\+Label3}
+\item 
+\Hypertarget{classMainWindow_a460ff822eac443bbb7f46c157259cfad}\label{classMainWindow_a460ff822eac443bbb7f46c157259cfad} 
+cv\+::\+Video\+Capture {\bfseries cap}
+\item 
+\Hypertarget{classMainWindow_a094086fcca9a86a5bfa41a8350bf0ae8}\label{classMainWindow_a094086fcca9a86a5bfa41a8350bf0ae8} 
+\mbox{\hyperlink{classFaceDetector}{Face\+Detector}} \texorpdfstring{$\ast$}{*} {\bfseries detector}
+\item 
+\Hypertarget{classMainWindow_ab06d554dc10a5171891f0941c416ca57}\label{classMainWindow_ab06d554dc10a5171891f0941c416ca57} 
+\mbox{\hyperlink{classFaceRecognizerWrapper}{Face\+Recognizer\+Wrapper}} \texorpdfstring{$\ast$}{*} {\bfseries face\+Rec}
+\item 
+\Hypertarget{classMainWindow_aea2ed45f86b6165573835969d17a1fbb}\label{classMainWindow_aea2ed45f86b6165573835969d17a1fbb} 
+\mbox{\hyperlink{classFaceManager}{Face\+Manager}} \texorpdfstring{$\ast$}{*} {\bfseries face\+Manager}
+\item 
+\Hypertarget{classMainWindow_aa4b6d566c5034f4d1ccad3dac4aaf61e}\label{classMainWindow_aa4b6d566c5034f4d1ccad3dac4aaf61e} 
+std\+::vector$<$ std\+::string $>$ {\bfseries name\+Buffer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new Main Window object. 
+
+Construct a new Main Window\+:\+: Main Window object and initializes the UI and face recognition components.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Pointer to the parent widget\\
+\hline
+\end{DoxyParams}
+Constructs the \doxylink{classMainWindow}{Main\+Window} by initializing all labels, buttons, and progress bar. Setting the font-\/size in the style sheets. Sets a window with a fixed size and title. Builds the layout by calling \doxylink{classMainWindow_a3a304253c9e7caeef028f75358bf1fd5}{setup\+UI()} method. Prepares the dataset directory and clears the framedata CSV file. Opens the default camera, displaying an error message upon failure. Creates an instance of both \doxylink{classFaceDetector}{Face\+Detector} \& \doxylink{classFaceRecognizerWrapper}{Face\+Recognizer\+Wrapper}. Connects to a Qtimer to refresh the video feed every 30 miliseconds by calling the \doxylink{classMainWindow_a02cb977adb2dce4e90edbb5515872a2c}{update\+Frame()} method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7} 
+\index{MainWindow@{MainWindow}!````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}}
+\index{````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MainWindow()}{\string~MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the Main Window\+:\+: Main Window object. 
+
+Destroys the \doxylink{classMainWindow}{Main\+Window} by deleting detector, face\+Rec, face\+Manager, and release cap if it is opened. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMainWindow_a8a643911f70fc3ca7ef11f929ecec7c6}\label{classMainWindow_a8a643911f70fc3ca7ef11f929ecec7c6} 
+\index{MainWindow@{MainWindow}!addFace@{addFace}}
+\index{addFace@{addFace}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{addFace}{addFace}}
+{\footnotesize\ttfamily void Main\+Window\+::add\+Face (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Enables the user to add a face or a profile. 
+
+Calls \doxylink{classMainWindow_a8a643911f70fc3ca7ef11f929ecec7c6}{add\+Face()} of face\+Manager.
+
+Enables the user to add a new face and/or employee by stopping the timer, and calling \doxylink{classMainWindow_a8a643911f70fc3ca7ef11f929ecec7c6}{add\+Face()} from face\+Manager. Upon completion, timer resumes. \Hypertarget{classMainWindow_a11983d10c2b67ed5df1fd211ca126306}\label{classMainWindow_a11983d10c2b67ed5df1fd211ca126306} 
+\index{MainWindow@{MainWindow}!deleteFace@{deleteFace}}
+\index{deleteFace@{deleteFace}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{deleteFace}{deleteFace}}
+{\footnotesize\ttfamily void Main\+Window\+::delete\+Face (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Enables the user to delete a face or a profile. 
+
+Calls \doxylink{classMainWindow_a11983d10c2b67ed5df1fd211ca126306}{delete\+Face()} of face\+Manager.
+
+Enables the user to delete a face and/or employee by stopping the timer, and calling \doxylink{classMainWindow_a11983d10c2b67ed5df1fd211ca126306}{delete\+Face()} from face\+Manager. Upon completion, timer resumes. \Hypertarget{classMainWindow_ae7514af99c8ebf13500b807866c5e351}\label{classMainWindow_ae7514af99c8ebf13500b807866c5e351} 
+\index{MainWindow@{MainWindow}!getDoorNumberForName@{getDoorNumberForName}}
+\index{getDoorNumberForName@{getDoorNumberForName}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{getDoorNumberForName}{getDoorNumberForName}}
+{\footnotesize\ttfamily QString Main\+Window\+::get\+Door\+Number\+For\+Name (\begin{DoxyParamCaption}\item[{const QString \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Get the Door Number For Name object. 
+
+Helper function to get door number (4th field) from names.\+csv for a given name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name to retrieve the allowed door entry of \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QString The door number that the inputted name is allowed to access
+\end{DoxyReturn}
+Opens the file path to the names.\+csv text file, where the employee data is stored. From there it checks to see if the file is able to be accessed, outputting an error message on failure. Upon success, iterates through each line of the file, splicing at every \textquotesingle{},\textquotesingle{}. When the line is not empty and the name in the line (index 0) and the inputted name matches, the file is closed and the door number (index 3) is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & QString representing the name to get the allowed door for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QString The door number that the given name is allowed to access, empty upon failure to locate the employee in the database 
+\end{DoxyReturn}
+\Hypertarget{classMainWindow_a36aa38227bf5b5ef69434ba97a06d5df}\label{classMainWindow_a36aa38227bf5b5ef69434ba97a06d5df} 
+\index{MainWindow@{MainWindow}!getPermissionLevelForName@{getPermissionLevelForName}}
+\index{getPermissionLevelForName@{getPermissionLevelForName}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{getPermissionLevelForName}{getPermissionLevelForName}}
+{\footnotesize\ttfamily QString Main\+Window\+::get\+Permission\+Level\+For\+Name (\begin{DoxyParamCaption}\item[{const QString \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Get the Permission Level For Name object. 
+
+Helper function to get permission level (3rd field) from names.\+csv for a given name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name to retrieve the permission level of \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\texorpdfstring{$\ast$}{*} QString The permission level for the inputted name
+\end{DoxyReturn}
+Opens the file path to the names.\+csv text file, where the employee data is stored. From there it checks to see if the file is able to be accessed, outputting an error message on failure. Upon success, iterates through each line of the file, splicing at every \textquotesingle{},\textquotesingle{}. When the line is not empty and the name in the line (index 0) and the inputted name matches, the file is closed and the permission level (index 2) is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & QString representing the name to get the permission level for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QString The permission level that the given name has, empty upon failure to locate the employee in the database 
+\end{DoxyReturn}
+\Hypertarget{classMainWindow_aef4cd5d97716464ac7bd8c475fb85186}\label{classMainWindow_aef4cd5d97716464ac7bd8c475fb85186} 
+\index{MainWindow@{MainWindow}!openPinWindow@{openPinWindow}}
+\index{openPinWindow@{openPinWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{openPinWindow}{openPinWindow}}
+{\footnotesize\ttfamily void Main\+Window\+::open\+Pin\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [slot]}}
+
+
+
+Opens the pinwindow to verify the user before accessing their profile. 
+
+Opens the pinwindow.
+
+Calls the pin class to validate the user via a password before enabeling them to access the admin page. Edits the pinwindow to delete when the widget is closed. \Hypertarget{classMainWindow_a61d8584317e4725f91db4411de58b018}\label{classMainWindow_a61d8584317e4725f91db4411de58b018} 
+\index{MainWindow@{MainWindow}!openTrainProject@{openTrainProject}}
+\index{openTrainProject@{openTrainProject}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{openTrainProject}{openTrainProject}}
+{\footnotesize\ttfamily void Main\+Window\+::open\+Train\+Project (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Retrains the model so that editting the databases can affect what the model detects. 
+
+Opens the training project.
+
+Allows the user to retrain the model so their edits to the databases affect the model. While the model is training, a progress bar is displayed to the user and deleted upon completion. \Hypertarget{classMainWindow_a3a304253c9e7caeef028f75358bf1fd5}\label{classMainWindow_a3a304253c9e7caeef028f75358bf1fd5} 
+\index{MainWindow@{MainWindow}!setupUI@{setupUI}}
+\index{setupUI@{setupUI}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setupUI()}{setupUI()}}
+{\footnotesize\ttfamily void Main\+Window\+::setup\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates the layout that the UI will use. 
+
+Setups the UI.
+
+Sections the GUI into 3 main sections, (sidebar, center, right). The sidebar section displays a title label for the doors with a label for each door. Each door label has a white border, centered within the section and is distributed equally along the vertical axis. The center section displays the live video feed in the videolabel. Two labels are displayed to show the name and permission level of the detected face. The right section contains various buttons for administrative actions. The buttons enable the user to, access the admin panel, add face and/or employee, delete face and/or employee, and retrain the face recognizer model. There also exists a progress bar within this section which indicates the current training progress. Finally, the function also connects the buttons to their respective events. \Hypertarget{classMainWindow_a02cb977adb2dce4e90edbb5515872a2c}\label{classMainWindow_a02cb977adb2dce4e90edbb5515872a2c} 
+\index{MainWindow@{MainWindow}!updateFrame@{updateFrame}}
+\index{updateFrame@{updateFrame}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updateFrame}{updateFrame}}
+{\footnotesize\ttfamily void Main\+Window\+::update\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Updates the frame from the camera and processes the face recognition. 
+
+Update frame from camera and process face recognition.
+
+This function captures a frame from the camera, converts it to grayscale, and detects faces using the {\ttfamily detector} object. Every detected face gets surrounded by a bounding box. If the detected face has a confidence level that is greater than 7 it is stored within a buffer. Every 60 frames, the most frequently identified name is determined and gets logged into framedata.\+csv alongside the name\textquotesingle{}s permission level. After the ui updates the door labels based on the which door the user is allowed to access. Finally the name is overlaid onto the frame which has a white border added to it and the videolabel is updated to display the processed frame. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+src/\mbox{\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}}\end{DoxyCompactItemize}

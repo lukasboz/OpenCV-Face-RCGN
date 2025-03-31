@@ -1,0 +1,12 @@
+/*!
+ \mainpage CS3307 Project Documentation
+
+ \section intro_sec Introduction
+
+ Welcome to the documentation for CS3307's Project by Lukas, Kevin, Naween, Woorim, and Matthew. This project implements face recognition using OpenCV for permissions-based access for doors.
+
+ \section install_sec Installation
+
+Install OpenCV 4.6.0 or higher. Have Qt5 core and widgets installed. Use the CMakeLists.txt in our attached repository to build the project using C++ 17 or later. Build and run.
+ */
+
