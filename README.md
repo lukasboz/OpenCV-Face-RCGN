@@ -35,6 +35,7 @@ The **UI** integrates an OpenCV camera feed with profile management functionalit
 
 ### Install Dependencies
 You can install all dependencies from their respective websites linked below:
+
 Qt: https://www.qt.io/download-dev
 OpenCV: https://docs.opencv.org/4.x/d3/d52/tutorial_windows_install.html
 
